@@ -1,15 +1,19 @@
-import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import Router from 'vue-router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import HelloWorld from '@/components/HelloWorld'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+/**
+ * @file 路由信息
+ * @author {{ author }}
+ */
+import Vue from 'vue';
+import Router from 'vue-router';
+import HelloWorld from '@/components/HelloWorld';
 
-Vue.use(Router){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-    }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  ]{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+    routes: [
+        {
+            path: '/',
+            name: 'HelloWorld',
+            component: HelloWorld
+        }
+    ]
+});
