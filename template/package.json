@@ -46,18 +46,7 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-html": "^3.0.0",
-    {{#if_eq lintConfig "standard"}}
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.2.0",
-    {{/if_eq}}
-    {{#if_eq lintConfig "airbnb"}}
-    "eslint-config-airbnb-base": "^11.3.0",
-    "eslint-import-resolver-webpack": "^0.8.3",
-    "eslint-plugin-import": "^2.7.0",
-    {{/if_eq}}
+    "eslint-plugin-babel": "^4.1.2",
     {{/lint}}
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.1",
