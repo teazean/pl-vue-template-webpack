@@ -28,7 +28,7 @@ exports.cssLoaders = function (options) {
         }
     };
 
-    var postcssLoader = {
+    const postcssLoader = {
         loader: 'postcss-loader',
         options: {
             sourceMap: options.sourceMap
