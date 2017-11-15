@@ -17,9 +17,9 @@
 
 ## 当前版本
 
-时间：2017-11-3
-upstream版本：1.2.1
-commit: https://github.com/vuejs-templates/webpack/commit/ad2de3b3780846786f0475255ff3794d53ac7a20
+- 时间：2017-11-3
+- upstream版本：1.2.1
+- commit: https://github.com/vuejs-templates/webpack/commit/ad2de3b3780846786f0475255ff3794d53ac7a20
 
 ## 更新历史
 
