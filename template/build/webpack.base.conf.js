@@ -27,12 +27,15 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.vue', '.json'],
         alias: {
+            {{#if_eq build "standalone"}}
             'vue$': 'vue/dist/vue.esm.js',
+            {{/if_eq}}
             '@': resolve('src')
         }
     },
     module: {
         rules: [
+            {{#lint}}
             ...(config.dev.useEslint ? [{
                 test: /\.(js|vue)$/,
                 loader: 'eslint-loader',
@@ -43,6 +46,7 @@ module.exports = {
                     emitWarning: !config.dev.showEslintErrorsInOverlay
                 }
             }] : []),
+            {{/lint}}
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
