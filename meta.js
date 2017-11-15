@@ -54,7 +54,12 @@ module.exports = {
       "message": "Pick an ESLint preset",
       "choices": [
         {
-          "name": "Baidu",
+          "name": "Baidu Fecs",
+          "value": "baidu",
+          "short": "baidu"
+        },
+        {
+          "name": "none (configure it yourself)",
           "value": "none",
           "short": "none"
         }
