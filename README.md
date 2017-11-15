@@ -1,58 +1,26 @@
-# vue-webpack-boilerplate
+# 说明
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
+这个repo是<https://github.com/vuejs-templates/webpack>的一个fork，主要就是为了符合百度代码规范，并且使用`eslint`实时检查时，也是用百度代码规范的相关`eslint`配置。
 
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+相关百度`eslint`配置见[eslint-config-baidu-fecs](https://github.com/teazean/eslint-config-baidu-fecs)
 
-## Documentation
+## 主要更新有以下几点
+1. config/build/test/src相关目录，更改成符合百度代码规范的。
+2. eslint的检查选项删除`standard`、`airbnb`的选项，增加`baidu`的选项。
 
-- [For this template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
-- [For Vue 2.0](http://vuejs.org/guide/): general information about how to work with Vue, not specific to this template
+## 模板说明文档
+见：<https://github.com/vuejs-templates/webpack>
 
-## Usage
+# 维护、更新
 
-This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
+目前方案只能人工check更新。
 
-``` bash
-$ npm install -g vue-cli
-$ vue init webpack my-project
-$ cd my-project
-$ npm install
-$ npm run dev
-```
+## 当前版本
 
-The development server will run on port 8080 by default. If that port is already in use on your machine, the next free port will be used.
+时间：2017-11-3
+upstream版本：1.2.1
+commit: https://github.com/vuejs-templates/webpack/commit/ad2de3b3780846786f0475255ff3794d53ac7a20
 
-## What's Included
+## 更新历史
 
-- `npm run dev`: first-in-class development experience.
-  - Webpack + `vue-loader` for single file Vue components.
-  - State preserving hot-reload
-  - State preserving compilation error overlay
-  - Lint-on-save with ESLint
-  - Source maps
-
-- `npm run build`: Production ready build.
-  - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
-  - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
-  - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
-  - Static assets compiled with version hashes for efficient long-term caching, and an auto-generated production `index.html` with proper URLs to these generated assets.
-  - Use `npm run build --report`to build with bundle size analytics.
-
-- `npm run unit`: Unit tests run in [JSDOM](https://github.com/tmpvar/jsdom) with [Jest](https://facebook.github.io/jest/), or in PhantomJS with Karma + Mocha + karma-webpack.
-  - Supports ES2015+ in test files.
-  - Easy mocking.
-
-- `npm run e2e`: End-to-end tests with [Nightwatch](http://nightwatchjs.org/).
-  - Run tests in multiple browsers in parallel.
-  - Works with one command out of the box:
-    - Selenium and chromedriver dependencies automatically handled.
-    - Automatically spawns the Selenium server.
-
-### Fork It And Make Your Own
-
-You can fork this repo to create your own boilerplate, and use it with `vue-cli`:
-
-``` bash
-vue init username/repo my-project
-```
+todos
