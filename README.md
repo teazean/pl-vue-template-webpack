@@ -1,26 +1,24 @@
 # 说明
 
-这个repo是<https://github.com/vuejs-templates/webpack>的一个fork，主要就是为了符合百度代码规范，并且使用`eslint`实时检查时，也是用百度代码规范的相关`eslint`配置。
+这个repo是<https://github.com/teazean/vue-template-webpack>的一个fork，因为原来就是forked，没办法，只能新建一个
 
-相关百度`eslint`配置见[eslint-config-baidu-fecs](https://github.com/teazean/eslint-config-baidu-fecs)
 
-## 主要更新有以下几点
-1. config/build/test/src相关目录，更改成符合百度代码规范的。
-2. eslint的检查选项删除`standard`、`airbnb`的选项，增加`baidu`的选项。
+## 主要相对于`teazean/vue-template-webpack`主要做了一下变动
+
+**vue-templates/webpack**的所有静态资源打包的路径都是相对于`/static'的，不符合`lego-events`的分子目录的发布。因此把打包的路径全部都改成相对于`./`相对路径。
+1. 去除所有`static`打包前缀，打包的目录如下
+
+    ```
+    // 为什么要js、css都要在第一级。。因为所有css中引用的相对路径的资源都是相对当前css的路径，如果css不在第一级，就会出错。。（蛋疼）
+    - dist
+        - index.html
+        - *.js
+        - *.css
+        - imgs
+            - *.png
+            - *.jpg
+    ```
+2. 项目目录`static`目录，继续copy到`dist/static`下。
 
 ## 模板说明文档
 见：<https://github.com/vuejs-templates/webpack>
-
-# 维护、更新
-
-目前方案只能人工check更新。
-
-## 当前版本
-
-- 时间：2017-11-3
-- upstream版本：1.2.1
-- commit: https://github.com/vuejs-templates/webpack/commit/ad2de3b3780846786f0475255ff3794d53ac7a20
-
-## 更新历史
-
-todos
