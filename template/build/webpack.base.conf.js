@@ -58,10 +58,25 @@ module.exports = {
                 include: [resolve('src'), resolve('test'), resolve('node_modules/@baidu/lego-events-common')]
             },
             {
+                test: /node_modules\/zepto/,
+                oneOf: [
+                    {
+                        test: /deferred/,
+                        /* eslint-disable */
+                        loader: 'imports-loader?this=>window,define=>false,$.Callbacks=zepto/src/callbacks!exports-loader?window.Zepto'
+                        /* eslint-enable */
+                    },
+                    {
+                        test: /.*/,
+                        loader: 'imports-loader?this=>window,define=>false!exports-loader?window.Zepto'
+                    }
+                ]
+            },
+            {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
-                    limit: 10000,
+                    limit: 2000,
                     name: utils.assetsPath('img/[name].[hash:7].[ext]')
                 }
             },
@@ -69,7 +84,7 @@ module.exports = {
                 test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
-                    limit: 10000,
+                    limit: 1,
                     name: utils.assetsPath('media/[name].[hash:7].[ext]')
                 }
             },
