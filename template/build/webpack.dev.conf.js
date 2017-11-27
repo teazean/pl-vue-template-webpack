@@ -38,6 +38,14 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         }
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            Zepto: 'zepto',
+            $: 'zepto',
+            '$.Callbacks': ['zepto/src/callbacks', 'Callbacks'],
+            '$.Deferred': ['zepto/src/deferred', 'Deferred'],
+            '$.os': ['zepto/src/detect', 'os'],
+            '$.browser': ['zepto/src/detect', 'browser']
+        }),
         new webpack.DefinePlugin({
             'process.env': require('../config/dev.env')
         }),
