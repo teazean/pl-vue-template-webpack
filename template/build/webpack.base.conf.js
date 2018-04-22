@@ -58,9 +58,8 @@ module.exports = {
                 include: [
                     resolve('src'),
                     resolve('test'),
-                    resolve('node_modules/@baidu/lego-events-common'),
                     resolve('node_modules/@baidu/lego-events-base'),
-                    resolve('node_modules/@baidu/lego-events-index'),
+                    resolve('node_modules/@baidu/lego-events-zhishu'),
                     resolve('node_modules/@baidu/lego-events-box'),
                     resolve('node_modules/@baidu/lego-events-map')
                 ]
